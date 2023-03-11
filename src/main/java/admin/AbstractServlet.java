@@ -29,6 +29,10 @@ import DTO.TeacherDTO;
 
 public abstract class AbstractServlet extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Resource(name = "jdbc/pozuelo_academy")
 	protected DataSource datasource;
 	
