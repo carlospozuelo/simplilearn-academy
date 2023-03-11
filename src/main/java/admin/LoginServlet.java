@@ -30,7 +30,9 @@ public class LoginServlet extends HttpServlet {
 		
 		/* To be updated future versions */
 		if (username != null && password != null && username.equals("admin") && password.equals(username)) {
-			Cookie cookie = new Cookie(username, password);
+			
+			/* To be upgraded in future versions. */
+			Cookie cookie = new Cookie("auth", "true");
 			
 			cookie.setMaxAge(86400);
 			resp.addCookie(cookie);
